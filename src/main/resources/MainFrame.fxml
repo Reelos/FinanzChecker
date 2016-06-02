@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ListView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="500.0" prefWidth="400.0" xmlns="http://javafx.com/javafx/8.0.60" xmlns:fx="http://javafx.com/fxml/1" fx:controller="de.reelos.finanzchecker.Start">
+   <children>
+      <ListView fx:id="ertragListe" layoutY="67.0" prefHeight="300.0" prefWidth="180.0" AnchorPane.bottomAnchor="100.0" AnchorPane.leftAnchor="20.0" AnchorPane.topAnchor="87.0" />
+      <ListView fx:id="verlustListe" layoutX="200.0" layoutY="67.0" prefHeight="200.0" prefWidth="180.0" AnchorPane.bottomAnchor="100.0" AnchorPane.rightAnchor="20.0" AnchorPane.topAnchor="87.0" />
+      <Label alignment="CENTER" layoutX="72.0" layoutY="225.0" text="Finanzchecker" textAlignment="CENTER" textFill="RED" AnchorPane.leftAnchor="40.0" AnchorPane.rightAnchor="40.0" AnchorPane.topAnchor="40.0">
+         <font>
+            <Font name="Arial" size="24.0" />
+         </font>
+      </Label>
+      <TextField fx:id="ertragFeld" layoutX="20.0" layoutY="420.0" prefHeight="25.0" prefWidth="155.0" AnchorPane.bottomAnchor="75.0" />
+      <TextField fx:id="verlustFeld" layoutX="200.0" layoutY="420.0" prefHeight="25.0" prefWidth="155.0" AnchorPane.bottomAnchor="75.0" />
+      <Button fx:id="ertragButton" ellipsisString="+" layoutX="169.0" layoutY="420.0" mnemonicParsing="false" onAction="#onErtagButton" prefWidth="25.0" text="+" AnchorPane.bottomAnchor="75.0" AnchorPane.rightAnchor="200.0" />
+      <Button fx:id="verlustButton" ellipsisString="+" layoutX="349.0" layoutY="420.0" mnemonicParsing="false" onAction="#onVerlustButton" prefWidth="25.0" text="+" AnchorPane.bottomAnchor="75.0" AnchorPane.rightAnchor="20.0" />
+      <Label layoutX="200.0" layoutY="448.0" text="Gesamt: ">
+         <font>
+            <Font name="Arial" size="18.0" />
+         </font>
+      </Label>
+      <Label fx:id="bilanzFeld" layoutX="278.0" layoutY="448.0" text="0,00 €">
+         <font>
+            <Font name="Arial" size="18.0" />
+         </font>
+      </Label>
+   </children>
+</AnchorPane>
