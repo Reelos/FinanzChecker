@@ -7,8 +7,7 @@
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
 
-
-<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="500.0" prefWidth="400.0" xmlns="http://javafx.com/javafx/8.0.60" xmlns:fx="http://javafx.com/fxml/1" fx:controller="de.reelos.finanzchecker.Start">
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="500.0" prefWidth="400.0" xmlns="http://javafx.com/javafx/8.0.60" xmlns:fx="http://javafx.com/fxml/1" fx:controller="de.reelos.finanzchecker.gui.MainFrameController">
    <children>
       <ListView fx:id="ertragListe" layoutY="67.0" prefHeight="300.0" prefWidth="180.0" AnchorPane.bottomAnchor="100.0" AnchorPane.leftAnchor="20.0" AnchorPane.topAnchor="87.0" />
       <ListView fx:id="verlustListe" layoutX="200.0" layoutY="67.0" prefHeight="200.0" prefWidth="180.0" AnchorPane.bottomAnchor="100.0" AnchorPane.rightAnchor="20.0" AnchorPane.topAnchor="87.0" />

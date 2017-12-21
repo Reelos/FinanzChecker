@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<FinanzData>
+	<FinanzCheck month="06" year="2016">
+		<proList>
+			<listItem value="14.2" />
+			<listItem value="14.2" />
+			<listItem value="14.2" />
+			<listItem value="14.2" />
+			<listItem value="14.2" />
+			<listItem value="14.2" />
+			<listItem value="14.2" />
+		</proList>
+		<conList>
+			<listItem value="14.2" />
+			<listItem value="14.2" />
+			<listItem value="14.2" />
+			<listItem value="14.2" />
+			<listItem value="14.2" />
+			<listItem value="14.2" />
+			<listItem value="14.2" />
+		</conList>
+	</FinanzCheck>
+</FinanzData>
