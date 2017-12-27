@@ -9,6 +9,10 @@ public abstract class BilanzBase {
 	public enum Type {
 		EINMALIG, MONATLICH, JAEHRLICH
 	}
+	
+	public enum KardinalType {
+		ABSTRACT, MALIFIT, BENIFIT
+	}
 	private final ReadOnlyIntegerProperty auftragIDProperty;
 	private final ObjectProperty<Date> createDateProperty = new SimpleObjectProperty<>();
 	private final ObjectProperty<Date> executeDateProperty = new SimpleObjectProperty<>();
@@ -104,5 +108,9 @@ public abstract class BilanzBase {
 	
 	public void setUser(User date) {
 		userProperty.set(date);
+	}
+	
+	public KardinalType getKardinalType() {
+		return KardinalType.ABSTRACT;
 	}
 }
