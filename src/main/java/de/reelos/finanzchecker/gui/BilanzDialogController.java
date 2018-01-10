@@ -3,6 +3,7 @@ package de.reelos.finanzchecker.gui;
 import java.net.URL;
 import java.util.ResourceBundle;
 
+import de.reelos.finanzchecker.logic.dbobj.BilanzObject;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
 import javafx.scene.control.Label;
@@ -13,7 +14,7 @@ import javafx.scene.control.TableView;
 public class BilanzDialogController implements Initializable {
 
     @FXML
-    private TableView<?> viewTable;
+    private TableView<BilanzObject> viewTable;
 
     @FXML
     private TableColumn<?, ?> describtionColumn;

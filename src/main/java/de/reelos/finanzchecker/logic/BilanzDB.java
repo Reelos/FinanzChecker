@@ -2,9 +2,9 @@ package de.reelos.finanzchecker.logic;
 
 import java.util.List;
 
-import de.reelos.finanzchecker.logic.dbobj.BilanzBase;
+import de.reelos.finanzchecker.logic.dbobj.BilanzObject;
 
-public class BilanzDB extends DBBase<BilanzBase> {
+public class BilanzDB extends DBBase<BilanzObject> {
 
 	@Override
 	protected int create(String... args) {
@@ -13,25 +13,25 @@ public class BilanzDB extends DBBase<BilanzBase> {
 	}
 
 	@Override
-	public void update(BilanzBase t) {
+	public void update(BilanzObject t) {
 		// TODO Auto-generated method stub
 		
 	}
 
 	@Override
-	public void delete(BilanzBase t) {
+	public void delete(BilanzObject t) {
 		// TODO Auto-generated method stub
 		
 	}
 
 	@Override
-	public BilanzBase read(String id) {
+	public BilanzObject read(String id) {
 		// TODO Auto-generated method stub
 		return null;
 	}
 
 	@Override
-	public List<BilanzBase> readAll() {
+	public List<BilanzObject> readAll() {
 		// TODO Auto-generated method stub
 		return null;
 	}

@@ -2,26 +2,21 @@ package de.reelos.finanzchecker.logic.dbobj;
 
 import java.util.Date;
 
+import com.sun.glass.ui.CommonDialogs.Type;
+
 import de.reelos.finanzchecker.logic.UserDB;
 import javafx.beans.property.*;
 
-public abstract class BilanzBase {
-	public enum Type {
-		EINMALIG, MONATLICH, JAEHRLICH
-	}
+public abstract class BilanzObject{
 	
-	public enum KardinalType {
-		ABSTRACT, MALIFIT, BENIFIT
-	}
 	private final ReadOnlyIntegerProperty auftragIDProperty;
 	private final ObjectProperty<Date> createDateProperty = new SimpleObjectProperty<>();
 	private final ObjectProperty<Date> executeDateProperty = new SimpleObjectProperty<>();
 	private final ObjectProperty<Date> endDateProperty = new SimpleObjectProperty<>();
-	private final ObjectProperty<Type> typeProperty = new SimpleObjectProperty<>();
 	private final DoubleProperty valueProperty = new SimpleDoubleProperty();
 	private final ObjectProperty<User> userProperty = new SimpleObjectProperty<>();
 	
-	public BilanzBase(int id, Date createDate, Date executeDate, Date endDate, Type type, double value, int uid) {
+	public BilanzObject(int id, Date createDate, Date executeDate, Date endDate, Type type, double value, int uid) {
 		auftragIDProperty = new SimpleIntegerProperty(id);
 		createDateProperty.set(createDate);
 		executeDateProperty.set(executeDate);
@@ -74,18 +69,6 @@ public abstract class BilanzBase {
 		endDateProperty.set(date);
 	}
 	
-	public ObjectProperty<Type> typeProperty() {
-		return typeProperty;
-	}
-	
-	public Type getType() {
-		return typeProperty.get();
-	}
-	
-	public void setType(Type date) {
-		typeProperty.set(date);
-	}
-	
 	public DoubleProperty valueProperty() {
 		return valueProperty;
 	}
@@ -108,9 +91,5 @@ public abstract class BilanzBase {
 	
 	public void setUser(User date) {
 		userProperty.set(date);
-	}
-	
-	public KardinalType getKardinalType() {
-		return KardinalType.ABSTRACT;
 	}
 }
