@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Menu?>
+<?import javafx.scene.control.MenuBar?>
+<?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+
+<BorderPane prefHeight="600.0" prefWidth="500.0" xmlns="http://javafx.com/javafx/8.0.60" xmlns:fx="http://javafx.com/fxml/1" fx:controller="de.reelos.finanzchecker.gui.BilanzDialogController">
+   <center>
+      <TableView fx:id="viewTable" prefHeight="200.0" prefWidth="200.0" BorderPane.alignment="CENTER">
+        <columns>
+          <TableColumn fx:id="describtionColumn" minWidth="150.0" prefWidth="250.0" resizable="false" text="Beschreibung" />
+          <TableColumn fx:id="gainColumn" prefWidth="75.0" style="fx-text-fill: GREEN;" text="Gewinn" />
+            <TableColumn fx:id="lossColumn" prefWidth="75.0" style="fx-text-fill: RED;" text="Verlust" />
+        </columns>
+         <columnResizePolicy>
+            <TableView fx:constant="CONSTRAINED_RESIZE_POLICY" />
+         </columnResizePolicy>
+         <padding>
+            <Insets bottom="10.0" left="10.0" right="10.0" />
+         </padding>
+      </TableView>
+   </center>
+   <top>
+      <MenuBar BorderPane.alignment="CENTER">
+        <menus>
+          <Menu mnemonicParsing="false" text="Datei">
+            <items>
+                  <MenuItem fx:id="openItem" mnemonicParsing="false" text="Öffnen" />
+                  <MenuItem fx:id="expoItem" mnemonicParsing="false" text="Exportieren" />
+              <MenuItem fx:id="closItem" mnemonicParsing="false" text="Schließen" />
+            </items>
+          </Menu>
+          <Menu mnemonicParsing="false" text="Bearbeiten">
+            <items>
+                  <MenuItem fx:id="addItem" mnemonicParsing="false" text="Hinzufügen" />
+              <MenuItem fx:id="remItem" mnemonicParsing="false" text="Löschen" />
+            </items>
+          </Menu>
+        </menus>
+      </MenuBar>
+   </top>
+   <bottom>
+      <VBox prefHeight="80.0" prefWidth="100.0" BorderPane.alignment="CENTER">
+         <children>
+            <HBox alignment="CENTER" prefHeight="20.0" prefWidth="200.0" VBox.vgrow="ALWAYS">
+               <children>
+                  <Label prefWidth="250.0" text="Gesamt">
+                     <font>
+                        <Font name="Times New Roman" size="18.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="gainLabel" alignment="CENTER" prefWidth="75.0" text="0,00 €" textFill="#00c800">
+                     <font>
+                        <Font name="Times New Roman" size="18.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="lossLabel" alignment="CENTER" prefWidth="75.0" text="0,00 €" textFill="#c80000">
+                     <font>
+                        <Font name="Times New Roman" size="18.0" />
+                     </font>
+                  </Label>
+               </children>
+            </HBox>
+            <HBox alignment="CENTER" VBox.vgrow="ALWAYS">
+               <children>
+                  <Label prefWidth="250.0" text="Differenz">
+                     <font>
+                        <Font name="Times New Roman" size="18.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="diffLabel" alignment="CENTER" prefWidth="150.0" text="0,00 €">
+                     <font>
+                        <Font name="Times New Roman" size="18.0" />
+                     </font>
+                  </Label>
+               </children>
+            </HBox>
+         </children>
+         <padding>
+            <Insets bottom="20.0" />
+         </padding>
+      </VBox>
+   </bottom>
+</BorderPane>
